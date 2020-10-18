@@ -3,7 +3,7 @@ import React from 'react';
 
 const icecream = (props) => {
     return (
-    <p>Favourite flavour: {props.flavour}</p>
+    <h2>Favourite flavour: {props.flavour}</h2>
     )
 }
 

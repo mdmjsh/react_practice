@@ -15,9 +15,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1>I'm a React App</h1>
-        <button>Switch Name</button>
-        <Person name={this.get_name(0)} age={this.get_age(0)}><Icecream flavour={this.get_flavour(0)}/></Person>
-        <Person name={this.get_name(1)} age={this.get_age(1)}>I'm a great guy!!</Person>
+        <button onClick={this.switchNameHandler}>Switch Name</button>
+        <Person name={this.getName(0)} age={this.getAge(0)}><Icecream flavour={this.getFlavour(0)}/></Person>
+        <Person name={this.getName(1)} age={this.getAge(1)}>I'm a great guy!!</Person>
       </div>
     );
     // Manually creating the above - the above JSX gets compiled to this
@@ -25,14 +25,17 @@ class App extends Component {
     // React.createElement(
     // 'h1', null, "I'm a React App!!!"));
   }
-  get_age(ix) {
+  getAge = (ix) => {
     return this.state.persons[ix].age
   }
-  get_name(ix) {
+  getName = (ix) => {
     return this.state.persons[ix].name
   }
-  get_flavour(ix) {
+  getFlavour = (ix) => {
     return this.state.persons[ix].flavour
+  }
+  switchNameHandler = () => {
+    console.log('Clicked!')
   }
 
 }
