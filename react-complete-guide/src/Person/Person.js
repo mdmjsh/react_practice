@@ -7,7 +7,6 @@ const person = (props) => {
         {/* `props.children` - any element between opening and closing of element at runtime */}
         <p>{props.children}</p>
     </div>
-    
     )
 }
 

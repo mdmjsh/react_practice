@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person'
+import Icecream from './Person/Icecream'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <h1>I'm a React App</h1>
-        <Person name="bob" age="33"/>
+        <Person name="bob" age="33"><Icecream flavour="chocolate"/></Person>
         <Person name="rob" age="50">I'm a great guy!!</Person>
       </div>
     );
